@@ -1,0 +1,19 @@
+version: "3.9"
+
+networks:
+  ffmpeg:
+    name: ffmpeg
+
+services:
+
+  system:
+    build:
+      context: .
+      dockerfile: ubuntu.dockerfile
+    container_name: ubuntu
+    volumes:
+      - ./download:/var/www/html
+    working_dir: /var/www/html
+    networks:
+      - ffmpeg
+

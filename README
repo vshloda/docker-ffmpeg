@@ -1,0 +1,3 @@
+docker-compose run --rm system ffmpeg -i "FILENAME.m3u8" -c copy -bsf:a aac_adtstoasc "file-output.mp4"
+
+
